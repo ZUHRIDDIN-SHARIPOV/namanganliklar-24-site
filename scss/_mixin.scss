@@ -1,0 +1,29 @@
+@mixin title {
+  font-family: $main-font;
+  font-weight: 500;
+  line-height: 26px;
+  font-size: 20px;
+  color: $dark;
+}
+@mixin text {
+  font-family: $main-font;
+  font-weight: 400;
+  line-height: 22px;
+  font-size: 16px;
+  color: $grey;
+}
+@mixin button {
+  font-family: $main-font;
+  font-weight: 500;
+  padding: 13px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: $dark-blue;
+  color: $light;
+  cursor: pointer;
+  &:hover {
+    background-color: $blue;
+    transition: 0.3s;
+  }
+}

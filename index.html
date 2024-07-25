@@ -4,19 +4,49 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./images/icon.svg" />
+    <link rel="icon" href="./images/news-icon.png" />
     <script defer src="./js/main.js"></script>
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="manifest" href="./manifest.json" />
-    <title>Document</title>
+    <title>NAMANGANLIKLAR 24</title>
   </head>
   <body>
     <header class="site-header">
       <div class="container site-header__container">
-        <div class="site-header__block"></div>
-        <nav class="site-nav"></nav>
+        <div class="site-header__block">
+          <div class="site-header__logo">
+            <a href="/">
+              <img
+                src="./images/header-logo.svg"
+                alt="NAMANGANLIKLAR 24 logo!"
+              />
+            </a>
+          </div>
+          <div class="site-header__currencies">
+            <span class="site-header__currency-dollar">10137.2</span>
+            <span class="site-header__currency-ruble">138.26</span>
+          </div>
+        </div>
+        <form class="site-header__form">
+          <div class="site-header__form-control">
+            <input
+              type="search"
+              name="search"
+              autocomplete="off"
+              placeholder="Поиск"
+            />
+          </div>
+          <div class="site-header__form-control">
+            <div class="languages">
+              <input type="checkbox" />
+              <label></label>
+            </div>
+          </div>
+          <button type="button" class="site-header__form-btn">Войти</button>
+        </form>
       </div>
     </header>
+    <nav class="site-nav"></nav>
     <main>
       <section class="hero">
         <div class="container hero__container">

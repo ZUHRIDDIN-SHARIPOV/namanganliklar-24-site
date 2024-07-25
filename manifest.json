@@ -1,8 +1,8 @@
 {
-  "name": "app name",
+  "name": "NAMANGANLIKLAR 24",
   "icons": [
     {
-      "src": "./images/icon.png",
+      "src": "./images/news-icon.png",
       "type": "image/png",
       "sizes": "230x230"
     }

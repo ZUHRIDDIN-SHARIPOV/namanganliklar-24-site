@@ -1,0 +1,138 @@
+.site-header {
+  background-color: $light-grey;
+}
+.site-header__container {
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  column-gap: 247px;
+}
+.site-header__block {
+  display: flex;
+  align-items: center;
+  column-gap: 35px;
+}
+.site-header__logo {
+  max-width: 276px;
+  flex-shrink: 0;
+}
+.site-header__currencies {
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+}
+.site-header__currency-dollar,
+.site-header__currency-ruble {
+  @include text;
+  &::before {
+    content: "$";
+    @include text;
+    font-weight: 700;
+    line-height: normal;
+    margin-right: 4.7px;
+    color: $blue;
+  }
+}
+.site-header__currency-ruble::before {
+  content: "P";
+}
+.site-header__form {
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+  position: relative;
+}
+.site-header__form-control:first-child {
+  input {
+    width: 275px;
+    @include text;
+    padding: 15px 15px 13px 41px;
+    line-height: normal;
+    outline: none;
+    border: none;
+    border-radius: 60px;
+    &::placeholder {
+      color: $dark-grey;
+    }
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+  }
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url("../../images/search-icon.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 15px;
+    left: 14px;
+    flex-shrink: 0;
+    cursor: text;
+  }
+}
+.languages {
+  height: 36px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.languages input[type="checkbox"] {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+}
+.languages label {
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.languages label:before,
+.languages label:after {
+  transition: 0.2s ease-in;
+}
+.languages label:before {
+  content: "УЗ";
+  width: 70px;
+  height: 36px;
+  font-family: $main-font;
+  font-weight: 400;
+  line-height: 12px;
+  padding: 9px 7px;
+  border: 3px solid $light-blue;
+  border-radius: 39px;
+  font-size: 13px;
+  background-color: $light;
+  color: $dark-grey;
+  box-shadow: inset 33px 0px 0 0px $light-blue;
+}
+.languages label:after {
+  content: "РУ";
+  position: absolute;
+  right: 3px;
+  top: 1px;
+  font-family: $main-font;
+  font-weight: 400;
+  line-height: normal;
+  padding: 9px 7px;
+  font-size: 13px;
+  color: $dark;
+}
+.languages input[type="checkbox"]:checked + label:before {
+  box-shadow: inset -33px 0px 0 0px $light-blue;
+  color: $dark;
+}
+.languages input[type="checkbox"]:checked + label:after {
+  color: $dark-grey;
+}
+.site-header__form-btn {
+  @include button;
+}
